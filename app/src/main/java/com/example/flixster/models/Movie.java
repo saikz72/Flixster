@@ -17,6 +17,7 @@ public class Movie {
     String posterPath;
     String backdropPath;
     Double voteAverage;
+    Integer id;
 
     // no-arg, empty constructor required for Parceler
     public Movie() {}
@@ -27,6 +28,7 @@ public class Movie {
         posterPath = movie.getString("poster_path");
         backdropPath = movie.getString("backdrop_path");
         voteAverage = movie.getDouble("vote_average");
+        id = movie.getInt("id");
     }
 
     public Double getVoteAverage() {
@@ -55,5 +57,8 @@ public class Movie {
 
     public String getBackdropPath(){
         return String.format("https://image.tmdb.org/t/p/w342/%s", backdropPath);
+    }
+    public int getId(){
+        return id;
     }
 }

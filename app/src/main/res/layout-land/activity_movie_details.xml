@@ -3,8 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MovieDetailsActivity">
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/md_backdrop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rbVoteAverage"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="346dp"
+        android:clickable="true"
+        android:onClick="OnPosterClick"
+        tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/tvTitle"
@@ -52,16 +63,5 @@
         android:numStars="5"
         android:stepSize="0.5" />
 
-    <ImageView
-        android:id="@+id/md_backdrop"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="156dp"
-        android:layout_marginBottom="383dp"
-        android:clickable="true"
-        android:onClick="OnPosterClick"
-        tools:srcCompat="@tools:sample/avatars" />
 
 </RelativeLayout>
