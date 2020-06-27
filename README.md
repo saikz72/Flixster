@@ -1,8 +1,6 @@
-# Project S - *FLIXSTER APP*
+# Project 2 - *FLIXSTER APPe*
 
-**Name of your app** is an android app that allows building a todo list and basic todo items management functionality including adding new items, editing and deleting an existing item.
-
-Submitted by: **Your Name Here**
+**FLIXSTER APP** shows the latest movies currently playing in theaters. The app utilizes the Movie Database API to display images and basic information about these movies to the user.
 
 Time spent: **72** hours spent in total
 
@@ -10,15 +8,19 @@ Time spent: **72** hours spent in total
 
 The following **required** functionality is completed:
 
-* [x] User can **view a list of movies playing now at theaters** from the Movie Database API.
-* [x] UI **Displays a nice default placeholder graphic**for each image during loading.
-* [x] Views are **responsive for both landscape and potrait mode**.
+* [x] User can **scroll through current movies** from the Movie Database API
+* [x] Display a nice default [placeholder graphic](https://guides.codepath.org/android/Displaying-Images-with-the-Glide-Library#advanced-usage) for each image during loading
+* [x] For each movie displayed, user can see the following details:
+  * [x] Title, Poster Image, Overview (Portrait mode)
+  * [x] Title, Backdrop Image, Overview (Landscape mode)
+* [x] Allow user to view details of the movie including ratings and popularity within a separate activity
 
 The following **stretch** features are implemented:
 
-* [x] **Added rounded corners for the images using the Glide transformations** 
-* [x] **Improved user interface through styling and coding**.
-* [x] **All Video posts can be played in full-screen using the YouTubePlayerView**.
+* [x] Improved the user interface by experimenting with styling and coloring.
+* [x] Apply rounded corners for the poster or background images using [Glide transformations](https://guides.codepath.org/android/Displaying-Images-with-the-Glide-Library#transformations)
+* [x] Apply the popular [View Binding annotation library](http://guides.codepath.org/android/Reducing-View-Boilerplate-with-ViewBinding) to reduce boilerplate code.
+* [x] Allow video trailers to be played in full-screen using the YouTubePlayerView from the details screen.
 
 The following **additional** features are implemented:
 
@@ -28,18 +30,21 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
+## LandScape
+<img src='https://github.com/saikz72/Flixster/blob/master/landscapeWalkthrough.gif'  />
+
 ## Potrait
 <img src='https://github.com/saikz72/Flixster/blob/master/potraitWalkthrough.gif' />
-
-## Landscape
-<img src="https://github.com/saikz72/Flixster/blob/master/landscapeWalkthrough.gif" />
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
 Describe any challenges encountered while building the app.
-1. setting up youtube api
-2. using external libraries like 
+
+## Open-source libraries used
+
+- [Android Async HTTP](https://github.com/loopj/android-async-http) - Simple asynchronous HTTP requests with JSON parsing
+- [Glide](https://github.com/bumptech/glide) - Image loading and caching library for Android
 
 ## License
 
