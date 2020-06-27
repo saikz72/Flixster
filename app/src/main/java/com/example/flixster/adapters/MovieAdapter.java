@@ -3,7 +3,6 @@ package com.example.flixster.adapters;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,7 +26,6 @@ import jp.wasabeef.glide.transformations.RoundedCornersTransformation;
 public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> {
     private Context context;
     private List<Movie> movies;
-    //public static final String TAG_ADAPTER = "MovieAdapter";
 
     public MovieAdapter(Context context, List<Movie> movies) {
         this.context = context;

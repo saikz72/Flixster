@@ -62,18 +62,31 @@
         android:stepSize="0.5" />
 
         <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="67dp"
-            android:layout_height="59dp"
+            android:id="@+id/playIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignEnd="@+id/md_backdrop"
             android:layout_alignBottom="@+id/md_backdrop"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="33dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="28dp"
-            android:layout_marginBottom="37dp"
+            android:layout_marginStart="42dp"
+            android:layout_marginTop="33dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginBottom="54dp"
             app:srcCompat="@android:drawable/ic_media_play" />
+
+        <TextView
+            android:id="@+id/tvPopularity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rbVoteAverage"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="50dp"
+            android:layout_toEndOf="@+id/md_backdrop"
+            android:textSize="24dp"
+            android:textColor="@android:color/white" />
+
     </RelativeLayout>
     </ScrollView>
 

@@ -33,7 +33,7 @@
         android:layout_marginTop="5dp"
         android:layout_marginRight="0dp"
         android:text="TextView"
-        android:textColor="@android:color/background_light"
+        android:textColor="@android:color/tertiary_text_light"
         android:textSize="17dp" />
 
     <RatingBar
@@ -61,17 +61,26 @@
     />
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="48dp"
-        android:layout_height="43dp"
+        android:id="@+id/playIcon"
+        android:layout_width="38dp"
+        android:layout_height="33dp"
         android:layout_alignStart="@+id/md_backdrop"
         android:layout_alignEnd="@+id/md_backdrop"
         android:layout_alignBottom="@+id/md_backdrop"
         android:layout_alignParentTop="true"
         android:layout_marginStart="43dp"
         android:layout_marginTop="42dp"
-        android:layout_marginEnd="37dp"
-        android:layout_marginBottom="43dp"
+        android:layout_marginEnd="47dp"
+        android:layout_marginBottom="53dp"
         app:srcCompat="@android:drawable/ic_media_play" />
+
+    <TextView
+        android:id="@+id/tvPopularity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rbVoteAverage"
+        android:layout_marginTop="20dp"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"/>
 
 </RelativeLayout>

@@ -14,6 +14,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.codepath.asynchttpclient.AsyncHttpClient;
 import com.codepath.asynchttpclient.callback.JsonHttpResponseHandler;
+import com.example.flixster.databinding.ActivityMovieDetailsBinding;
 import com.example.flixster.models.Movie;
 
 import org.json.JSONArray;
@@ -29,8 +30,10 @@ public class MovieDetailsActivity extends AppCompatActivity {
     Movie movie;
     String videoId;
     Integer movie_id;
+
     TextView tvTitle;
     TextView tvOverview;
+    TextView tvPopularity;
     RatingBar rbVoteAverage;
     ImageView md_backdrop;
     String movie_trailer_api_key;
@@ -38,7 +41,8 @@ public class MovieDetailsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_movie_details);
+        ActivityMovieDetailsBinding binding = ActivityMovieDetailsBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
         // unwrap the movie passed in via intent, using its simple name as a key
         movie = (Movie) Parcels.unwrap(getIntent().getParcelableExtra(Movie.class.getSimpleName()));
@@ -63,17 +67,19 @@ public class MovieDetailsActivity extends AppCompatActivity {
         });
 
         //assign views
-        tvTitle = findViewById(R.id.tvTitle);
-        tvOverview = findViewById(R.id.tvOverview);
-        rbVoteAverage = findViewById(R.id.rbVoteAverage);
+        tvTitle = binding.tvTitle;
+        tvOverview = binding.tvOverview;
+        rbVoteAverage =binding.rbVoteAverage;
         md_backdrop = findViewById(R.id.md_backdrop);
+        tvPopularity = binding.tvPopularity;
 
         int placeholder = R.drawable.flicks_backdrop_placeholder;
         String imageUrl = movie.getBackdropPath();
 
-        // set the title and overview and backdrop
+        // set the title and overview and backdrop and popularity
         tvTitle.setText(movie.getTitle());
         tvOverview.setText(movie.getOverview());
+        tvPopularity.setText("Popularity: " +  movie.getPopularity() + "/100");
         Glide.with(this)
                 .load(imageUrl)
                 .placeholder(placeholder)
