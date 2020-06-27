@@ -11,7 +11,7 @@ import java.util.List;
 @Parcel // annotation indicates class is Parcelable
 public class Movie {
 
-    // fields must be public for parceler
+    // fields must be public for parcelere
     String title;
     String overview;
     String posterPath;
