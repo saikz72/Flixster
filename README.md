@@ -16,9 +16,9 @@ The following **required** functionality is completed:
 
 The following **stretch** features are implemented:
 
-* [x]**Added rounded corners for the images using the Glide transformations** 
-* [x]**Improved user interface through styling and coding**.
-* [x]**All Video posts can be played in full-screen using the YouTubePlayerView**.
+* [x] **Added rounded corners for the images using the Glide transformations** 
+* [x] **Improved user interface through styling and coding**.
+* [x] **All Video posts can be played in full-screen using the YouTubePlayerView**.
 
 The following **additional** features are implemented:
 
