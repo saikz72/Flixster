@@ -1,55 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-
-    <ImageView
-        android:id="@+id/md_backdrop"
-        android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/layoutBackground"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/rbVoteAverage"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="56dp"
-        android:layout_marginEnd="346dp"
-        android:clickable="true"
-        android:onClick="OnPosterClick"
-        tools:srcCompat="@tools:sample/avatars" />
+        >
 
-    <TextView
-        android:id="@+id/tvTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginStart="141dp"
+        <ImageView
+            android:id="@+id/md_backdrop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="0dp"
+            android:clickable="true"
+            android:onClick="OnPosterClick"
+            tools:srcCompat="@tools:sample/avatars" />
 
-        android:layout_marginLeft="141dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="161dp"
-        android:layout_marginRight="161dp"
-        android:text="Movie Title"
-        android:textAppearance="@android:style/TextAppearance.Large" />
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_toEndOf="@+id/md_backdrop"
+            android:text="Movie Title"
+            android:textAppearance="@android:style/TextAppearance.Large"
+            android:textColor="@android:color/white"
+            android:textSize="36sp" />
 
-    <TextView
-        android:id="@+id/tvOverview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tvTitle"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginRight="0dp"
-        android:text="TextView" />
+        <TextView
+            android:id="@+id/tvOverview"
+            android:layout_width="573dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTitle"
+            android:layout_marginTop="17dp"
+            android:layout_toEndOf="@+id/md_backdrop"
+            android:text="TextView"
+            android:textColor="@android:color/tertiary_text_light" />
 
     <RatingBar
         android:id="@+id/rbVoteAverage"
@@ -57,11 +52,29 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvOverview"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="0dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="19dp"
+        android:layout_toEndOf="@+id/md_backdrop"
+        android:layout_marginBottom="20dp"
         android:numStars="5"
+        android:scaleX="2"
+        android:scaleY="2"
         android:stepSize="0.5" />
 
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="67dp"
+            android:layout_height="59dp"
+            android:layout_alignEnd="@+id/md_backdrop"
+            android:layout_alignBottom="@+id/md_backdrop"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="33dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="28dp"
+            android:layout_marginBottom="37dp"
+            app:srcCompat="@android:drawable/ic_media_play" />
+    </RelativeLayout>
+    </ScrollView>
 
 </RelativeLayout>

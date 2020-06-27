@@ -29,7 +29,6 @@ public class MovieDetailsActivity extends AppCompatActivity {
     Movie movie;
     String videoId;
     Integer movie_id;
-
     TextView tvTitle;
     TextView tvOverview;
     RatingBar rbVoteAverage;
@@ -43,9 +42,7 @@ public class MovieDetailsActivity extends AppCompatActivity {
 
         // unwrap the movie passed in via intent, using its simple name as a key
         movie = (Movie) Parcels.unwrap(getIntent().getParcelableExtra(Movie.class.getSimpleName()));
-        //Log.d("MovieDetailsActivity", String.format("Showing details for '%s'", movie.getTitle()));
-
-        movie_id = movie.getId();
+        movie_id = movie.getId();       //get the id of the movie
         movie_trailer_api_key = "https://api.themoviedb.org/3/movie/"+String.valueOf(movie_id)+"/videos?api_key=d0a8d9b3000f2bb347d4374ace4ea63b";
         AsyncHttpClient client = new AsyncHttpClient();
         client.get(movie_trailer_api_key,  new JsonHttpResponseHandler() {
@@ -54,15 +51,11 @@ public class MovieDetailsActivity extends AppCompatActivity {
             public void onSuccess(int statusCode, Headers headers, JSON json) {
                 JSONObject jsonObject = json.jsonObject;
                 try {
-                    JSONArray results = jsonObject.getJSONArray("results");
                     videoId = jsonObject.getJSONArray("results").getJSONObject(0).getString("key");
-
                 } catch (JSONException e) {
-                    Log.d(TAG, "catch: some shit");
                     e.printStackTrace();
                 }
             }
-
             @Override
             public void onFailure(int statusCode, Headers headers, String response, Throwable throwable) {
                 Log.d(TAG, "onFailure: request didn't got through!!");

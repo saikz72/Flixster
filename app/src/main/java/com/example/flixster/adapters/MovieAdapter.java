@@ -22,6 +22,8 @@ import org.parceler.Parcels;
 
 import java.util.List;
 
+import jp.wasabeef.glide.transformations.RoundedCornersTransformation;
+
 public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> {
     private Context context;
     private List<Movie> movies;
@@ -36,7 +38,6 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        //Log.d("MovieAdapter", "onCreateViewHolder");
         View movieView = LayoutInflater.from(context).inflate(R.layout.item_movie, parent, false);
         return new ViewHolder(movieView);
     }
@@ -44,7 +45,6 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
     //populating data into the item through holder
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Log.d("MovieAdapter", "onBindViewHolder " + position);
         Movie movie = movies.get(position);     //get the movie at the passed in position
         holder.bind(movie);     //bind movie into the viewHolder
     }
@@ -77,12 +77,16 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
             if(context.getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE){
                 imageUrl = movie.getBackdropPath();
                 placeholder = R.drawable.flicks_backdrop_placeholder;
+
             }else{
                 imageUrl = movie.getPosterPath();
                 placeholder = R.drawable.flicks_movie_placeholder;
             }
+            int radius = 30;
+            int margin =  10;
             Glide.with(context)
-                    .load(imageUrl)
+                    .load(imageUrl).
+                    transform(new RoundedCornersTransformation(radius, margin))
                     .placeholder(placeholder)
                     .into(ivPoster);
         }

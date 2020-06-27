@@ -4,36 +4,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@drawable/border"
+    android:layout_marginStart="2dp"
+    android:layout_marginRight="2dp"
     >
 
     <ImageView
         android:id="@+id/ivPoster"
-        android:layout_width="100dp"
-        android:layout_height="120dp"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_below="@+id/tvTitle"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="0dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:clickable="false"
+
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="5dp"
-        android:layout_toEndOf="@+id/ivPoster"
-        android:textSize="24sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:textColor="@android:color/background_dark"
+        android:textSize="36sp"
         tools:text="Fast and Furious: HOVBSKJDKJ AFKJ DJFKDJHF DAJD KJD D" />
 
     <TextView
         android:id="@+id/tvOverview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tvTitle"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="5dp"
-        android:layout_toEndOf="@+id/ivPoster"
+        android:layout_below="@+id/ivPoster"
+        android:layout_marginTop="0dp"
+        android:textSize="17dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginLeft="3dp"
         tools:text="sample text from movieijaijdjdjidjdjfadkjf dj kadfj kdjf jdkf . ksjf kajdk fdf akdjf djf;ad fjkdajf djfa dfd fdjf" />
 </RelativeLayout>
