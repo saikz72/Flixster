@@ -45,7 +45,7 @@ public class MovieDetailsActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         // unwrap the movie passed in via intent, using its simple name as a key
-        movie = (Movie) Parcels.unwrap(getIntent().getParcelableExtra(Movie.class.getSimpleName()));
+        movie = (getIntent().getParcelableExtra(Movie.class.getSimpleName()));
         movie_id = movie.getId();       //get the id of the movie
         movie_trailer_api_key = "https://api.themoviedb.org/3/movie/"+String.valueOf(movie_id)+"/videos?api_key=d0a8d9b3000f2bb347d4374ace4ea63b";
         AsyncHttpClient client = new AsyncHttpClient();
